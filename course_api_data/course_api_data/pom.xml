@@ -8,11 +8,11 @@
 		<version>3.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.myprc.springboot</groupId>
-	<artifactId>course-api</artifactId>
+	<groupId>com.myprc.springbootjpa</groupId>
+	<artifactId>course_api_data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CourseAPI</name>
-	<description>Demo project for Spring Boot</description>
+	<name>course_api_data</name>
+	<description>Demo project for Spring Boot Data JPA</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -34,7 +34,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derbytools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

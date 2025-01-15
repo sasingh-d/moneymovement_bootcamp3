@@ -1,13 +1,13 @@
-package io.myprc.springboot.course_api;
+package com.myprc.springbootjpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CourseApiApplication {
+public class CourseApiDataApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CourseApiApplication.class, args);
+		SpringApplication.run(CourseApiDataApplication.class, args);
 	}
 
 }
