@@ -1,8 +1,8 @@
 package com.myprc.springbootjpa.service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,18 +16,18 @@ public class TopicService {
 	@Autowired
 	TopicRepository topicRepository;
 
-	/*
-	 * 
-	 * private List<Topic> topics = new ArrayList<>(Arrays.asList( new
-	 * Topic("spring1", "Spring Framework", "A book of Spring framework"), new
-	 * Topic("java2", "J2EE", "Servlets"), new Topic("aws1", "AWS Best Practices",
-	 * "AWS Introduction")));
-	 * 
-	 */
-
+	
+	  private List<Topic> topics = new ArrayList<>(Arrays.asList( new
+	  Topic("spring1", "Spring Framework", "A book of Spring framework"), new
+	  Topic("java2", "J2EE", "Servlets"), new Topic("aws1", "AWS Best Practices",
+	  "AWS Introduction")));
+	  
+	  
+	 
 	public List<Topic> getAllTopics() {
-		List<Topic> topics = new ArrayList<>();
-		topicRepository.findAll().forEach(t -> topics.add(t));
+		//List<Topic> topics = new ArrayList<>();
+		//topicRepository.findAll().forEach(t -> topics.add(t));
+		// topics;
 		return topics;
 	}
 
@@ -36,7 +36,8 @@ public class TopicService {
 	}
 
 	public void addTopic(Topic topic) {
-		topicRepository.save(topic);
+		//topicRepository.save(topic);
+		topics.add(topic);
 	}
 
 	public void updateTopic(String topicId, Topic topic) {
