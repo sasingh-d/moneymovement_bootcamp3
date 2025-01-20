@@ -1,0 +1,20 @@
+spring:
+     application:
+               name: spring-boot-config
+my:
+ greeting: Hello World
+ appname: My App
+ list:
+    values: "one,two,three"
+app:
+   description: Welcome to $(my.appname)
+db:
+  connectionValues: "{ConnectionString:'http://string', password :'foo', name : 'abc'}"
+  name : mydb
+  port : 3001
+
+management:
+         endpoints:
+                 web:
+                   exposure:
+                          include: "*"
