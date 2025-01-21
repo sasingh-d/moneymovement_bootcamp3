@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,7 @@ import com.myprc.microservice.config.DBSetting;
 @RestController
 public class GreetingController {
 	
-	@Value("${my.greeting : default value}")
+	@Value("${my.greeting}")
 	private String greetingMessage;
 	
 	@Value("my.static.message")
@@ -25,9 +26,17 @@ public class GreetingController {
 	@Autowired
 	private DBSetting dbSetting;
 	
+	@Autowired
+	private Environment env;
+	
 	@GetMapping("/greetings")
 	public String greetings() {
 		return greetingMessage + " " + staticMessage + messageList;
 	}
 
+	@GetMapping("/envdetails")
+	private String envDetails() {
+		env.toString();
+		return env.getProperty("my.greeting");
+	}
 }

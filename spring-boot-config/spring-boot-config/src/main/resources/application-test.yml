@@ -1,22 +1,20 @@
 spring:
      application:
                name: spring-boot-config
-     profiles.active: test          
 my:
- greeting: Hello World
+ greeting: Hello World test
  appname: My App
  list:
     values: "one,two,three"
 app:
    description: Welcome to $(my.appname)
 db:
-  connectionValues: "connection-string  here"
-  name : 127.0.0.1
-  port : 3001
+  connectionValues: "test-connection string"
+  name : mydb
+  port : 4000
 
 management:
          endpoints:
                  web:
                    exposure:
                           include: "*"
-                          
